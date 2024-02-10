@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Collection</title>
+</head>
+<body>
+    <input type="text">
+    <button onclick="getinput()">click</button>
+    <!--(1)h1태그를 출력할 공간 생성하기-->
+    <div id="h1"></div>
+
+    <script>
+        //input 입력 값 가져오기
+        //input,select,textarea 등 입력 값은 value 속성으로 접근
+
+        //(mission) input 입력 값 h1 태그로 출력하기
+        const getinput =() => {
+            let inputEle = document.getElementsByTagName('input')[0]
+            console.log(inputEle.value)
+            let container = document.getElementById('h1')
+            container.innerHTML = `<h1>${inputEle.value}</h1>`
+            //input 태그 비워주기
+            inputEle.value = ''
+        }
+    </script>
+</body>
+</html>

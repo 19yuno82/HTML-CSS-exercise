@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom style practice</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        #redBox{
+            background-color: red;
+        }
+        #blueBox{
+            background-color: blue;
+        }
+        #greenBox{
+            background-color: green;
+        }
+        #grayBox{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="redBox"></div>
+    <div id="blueBox"></div>
+    <div id="greenBox"></div>
+    <div id="grayBox"></div>
+    <br>
+    <button onclick="move()">이동하기</button>
+    <button onclick="circle()">둥글게</button>
+
+    <script>
+        let div_all = document.querySelectorAll('div')
+        let red_box = document.querySelector('#redBox')
+        let blue_box = document.querySelector('#blueBox')
+        let green_box = document.querySelector('#greenBox')
+        let gray_box = document.querySelector('#grayBox')
+
+        const move = () => {
+            red_box.style.marginLeft = '100px'
+            blue_box.style.marginLeft = '200px'
+            green_box.style.marginLeft = '300px'
+            gray_box.style.marginLeft = '400px'
+        }
+
+        const circle = () => {
+            for(let i of div_all) {
+                i.style.borderRadius = '30%' 
+            }
+        }
+
+    </script>
+</body>
+</html>

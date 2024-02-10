@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        /*애니메이션 : 적용 스타일을 부드럽게 전환 시켜주는 속성
+            name + duration + @keyframes => 지정!
+        */
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+
+            /*애니메이션 이름 지정*/
+            animation-name: boxAni;
+
+            /*애니메이션 시간 지정*/
+            animation-duration: 300ms;
+
+            /*애니메이션 반복 횟수 지정*/
+            animation-iteration-count: 10;
+            
+            /*애니메이션 방향 지정*/
+            animation-direction: alternate-reverse;
+
+            /*애니메이션 지연 시간 설정*/
+            animation-delay: 1s;
+        }
+        @keyframes boxAni {
+            from{
+                margin-left: 0px;
+            }
+            to{
+                margin-left: 200px;
+                margin-top: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

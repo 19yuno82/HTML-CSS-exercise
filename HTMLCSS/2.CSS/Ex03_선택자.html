@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*1.전체 선택자(*, 0) : html문서에 모든 요소*/
+        *{
+            color: tomato;
+        }
+        /*2.요소(태그)선택자(요소명, 1) : html문서의 해당 요소*/
+        h3{
+            color: blue;
+        }
+        li{
+            color: goldenrod;
+        }
+        /*4.id선택자(#아이디명, 100) : 특정 요소(중복 불가)*/
+        #htmlcss {
+            background-color: steelblue;
+        }
+        /*3.class선택자(.클래스명, 10) : 특정 요소(중복 가능)*/
+        .java {
+            background-color: aquamarine;
+        }
+        /*Q1.body를 기준으로 해서 ul의 모든 자식 요소의 글씨 크기를 30px로 변경*/
+        body ul{
+            font-size: 30px;
+        }
+        /*Q2.class가 java인 요소 중에서 li요소만 이탤릭체로 변경*/
+        li.java{
+            font-style: italic;
+        }
+        /*Q3.첫번째 li를 기준으로 해서 li요소 중에서 class가 java인 요소의 글씨를 두껍게 변경*/
+        li~li.java{
+            font-weight: 900;
+            color: black;
+        }
+        /*Q4.class가 java인 p태그를 기준으로 해서 id가 git인 요소의 글씨색을 변경*/
+        p.java~#git {
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h3>빅데이터 플랫폼 개발자 과정</h3>
+    <ul>
+        <li class="java">송승호</li>
+        <p class="java">이은비</p>
+        <li class="java">박원호</li>
+        <li id="htmlcss" class="java">박수현</li>
+        <li id="git">임승환</li>
+        <li id="db">김민수</li>
+        <li id="python">정봉균</li>
+    </ul>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex07_공간분할태그</title>
+    <style>
+        /*
+        display: block
+        종류: div,p,..등 -> 기본값이 block
+        무조건 가로로 한줄의 영역을 차지하는 속성
+        width,height 값 설정이 가능
+
+        display: inline
+        종류: span,a,...등 -> 기본값이 inline
+        내가 담은 콘텐츠까지만 크기로 삼는 속성
+        width,height 값 설정이 불가능
+        
+        display: inline-block
+        inline + block -> width,height 값 설정이 가능
+
+        display: none
+        요소가 안보이게 하는 속성
+        */
+        div{
+            background-color: red;
+            display: inline-block;
+            width: 100px;
+        }
+        p{
+            background-color: yellowgreen;
+            display: none;
+            
+        }
+        span{
+            background-color: peru;
+            display: block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        div태그
+    </div>
+    <p>
+        p태그
+    </p>
+    <span>span태그</span>
+</body>
+</html>

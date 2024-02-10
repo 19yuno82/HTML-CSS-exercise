@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex05_목록태그</title>
+</head>
+<body>
+    <h2> 목록태그 </h2>
+    <h4> 순서가 없는 ul태그 (unordered list) </h4>
+    <!-- ul태그 type 속성 : circle,square,disc,none -->
+    <ul> 
+        스마트인재개발원 강사진
+        <li> 박수현 
+            <ul type="square">
+                <li> 근무지 : 동구 캠퍼스 </li>
+                <li> 강의 : Web강의 </li>
+            </ul>
+        </li>
+        <li> 송승호 
+            <ul type="none">
+                <li> 근무지 : 목포 분원 </li>
+                <li> 강의 : Java </li>
+            </ul>
+        </li>
+        <li> 이은비 </li>
+        <li> 임승환 </li>
+        <li> 류이수 </li>
+    </ul>
+    <hr>
+    <h4> 순서가 있는 ol태그 (ordered list) </h4>
+    <!-- ol태그의 속성
+    -type : a,A,I,i,1
+    -start:시작할 숫자 지정
+    -reversed: 내림차순 -->
+    <ol type="1" reversed start="10">
+        멜론차트 100위
+        <li> 악뮤 - Love Lee </li>
+        <li> 악뮤 - 후라이의 꿈 </li>
+        <li> 다듀 - Smoke </li>
+        <li> 정국 - Seven </li>
+        <li> NewJeans - Super shy </li>
+    </ol>
+    <hr>
+    <h4> 좋아하는 요리 순서 </h4>
+    <ul>
+        <li>한식
+            <ol> 
+                <li> 국 
+                    <ol>
+                        <li> 미역국 </li>
+                        <li> 사골국 </li>
+                    </ol>
+                </li>
+                <li> 반찬 
+                    <ol>
+                        <li> 숙주나물 </li>
+                        <li> 장조림 </li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li>일식</li>
+        <li>중식</li>
+    </ul>
+
+</body>
+</html>

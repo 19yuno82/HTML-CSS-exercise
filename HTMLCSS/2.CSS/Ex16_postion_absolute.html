@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex16</title>
+    <style>
+        #parents{
+            height: 300px;
+            border: 10px solid black;
+            position: relative;
+        }
+        #child{
+            height: 100px; width: 100px;
+            background-color: red;
+            position: absolute;
+            /*absolute: 부모 요소 내에서 절대적인 위치 선정
+                      : relative, absolute,fixed */
+            bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parents">
+        <div id="child"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01jQ</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>jQuery start</h1>
+    <button id="textbtn">TEXT</button>
+    <button id="htmlbtn">HTML</button>
+
+    <script>
+        //jQuery / $
+        //=> wrapper(래퍼) : 인자로 전달된 요소들에 
+        //   jQuery의 기능성을 부가해서 반환
+
+        //(1) h1 요소 가져오기
+        let valJs = document.querySelector('h1');
+        console.log(valJs);
+        let valJq = jQuery('h1');
+        valJq = $('h1');
+        console.log(valJq);
+
+        //(2)text 버튼 클릭 시 내용만
+        $('#textbtn').click(()=>{
+            console.log('textbtn');
+            console.log(valJs.innerText);
+            console.log($('h1').text());
+
+            //내용변경
+            //valJs.innerText = 'JavaScript';
+            $('h1').text('JavaScript');
+        })
+        //(3)html 버튼 클릭 시 태그까지
+        $('#htmlbtn').click(()=>{
+            console.log('htmlbtn');
+
+            //태그까지 변경
+            // valJs.innerHTML = '<a href="#">a 태그로 변경</a>'
+            $('h1').html('<a href="#">a 태그로 변경</a>')
+        })
+    </script>
+</body>
+</html>

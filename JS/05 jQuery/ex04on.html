@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dynamic event</title>
+    <style>
+         button{
+            width: 100px;
+            height: 60px;
+            border: none;
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin: 5px;
+        }
+        .click{
+            background-color: lightblue;
+        }
+        .on{
+            background-color: lightsalmon;
+        }
+    </style>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button class="click">click</button>
+    <button class="on">on</button>
+    <br><br>
+
+    <script>
+        //동적 이벤트 바인딩
+        //$(document).on(이베트타입,이벤트대상,이벤트핸들러)
+
+        //click 버튼 클릭 시, click 메소드 사용
+        $('.click').click(()=>{
+            console.log('click');
+            $('body').append('<button class="click">click</button>');
+        })
+        //on 버튼 클릭 시, on 메소드 사용
+        $(document).on('click','.on',()=>{
+            console.log('on');
+            $('body').append('<button class="on">on</button>')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callbackFunc</title>
+</head>
+<body>
+    <button>click</button>    
+
+    <script>
+        /*
+        콜백(함수) : 어떤 이벤트가 발생했거나 
+                    특정 시점에 도달했을 때
+                    시스템에서 호출하는 함수
+        함수에 파라미터로 들어가는 함수
+        */
+
+        //(1)이벤트 발생 : addeventListener()
+        document.querySelector('button').addEventListener('click',()=>{
+            console.log('🥪');
+        })
+
+        //(2)시점 도달 : setTimeout()
+        console.log('🥩');
+        setTimeout(()=>{
+            console.log('🍖');
+        }, 2000)
+        console.log('🥠');
+    </script>
+</body>
+</html>

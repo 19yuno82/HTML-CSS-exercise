@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM practice</title>
+    <style>
+        div{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>클릭 한번 해볼까요</h1>
+    <button onclick="h1click()">h1태그 생성</button>
+    <button onclick="aclick()">a태그 생성</button>
+    <button onclick="ulclick()">ul태그 생성</button>
+
+    <!--버튼 클릭 시 태그가 생성될 공간-->
+    <div id="divTag"></div>
+
+    <script>
+        //(1) 태그 생성 공간 div 요소 가져오기
+        let container = document.getElementById('divTag');
+
+        //(2) h1버튼 클릭 시 div요소에 h1 태그 생성
+        const h1click = () => {
+            console.log('h1');
+            container.innerHTML += '<h1>DOM활용하기</h1>'
+            container
+        }
+        //(3) a버튼 클릭 시 
+        const aclick = () => {
+            console.log('a');
+            container.innerHTML += '<a href="http://www.google.com">Google이여, 나의 부름에 응하라☏</a>'
+        }
+        //(4) ul버튼 클릭 시
+        const ulclick = () => {
+            console.log('ul');
+            container.innerHTML += '<ul><li>HTML</li><li>CSS</li><li>JS</li></ul>'
+        }
+        // ** 태그가 생성된 이후 사라지지 않고 누적되게
+    </script>
+</body>
+</html>

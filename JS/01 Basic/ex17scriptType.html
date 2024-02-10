@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>script type</title>
+</script>
+<!-- 
+    외부스크립트 : 외부의 js 파일 안에 작성 후 연결
+    => defer : HTML 로딩이 다 되고 나서 script 실행
+-->
+<script defer src="./ex17.scriptType.js"></script>
+</head>
+<body>
+    <!--
+        인라인 스크립트 : 
+    -->
+    <button style="color: red;" onmouseenter="console.log('마우스 올림');">MOUSE❗</button>
+
+    <!-- 
+        내부스크립트 : head 혹은 body 영역의 Script 태그 안에 작성
+    -->
+    <script>
+        console.log('Hello World!');
+    </script>
+</body>
+</html>

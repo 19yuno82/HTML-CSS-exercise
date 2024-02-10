@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, tr, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //(0) 사용할 데이터 초기화
+        let subNum = 0;
+        let subName = [];
+        let subScore = [];
+        let ttlScore = 0;
+        let avgScore = 0;
+        //(1) 과목 수 입력
+        subNum = Number(prompt('과목 수 입력해주세요 >>'));
+        //(2) 과목 수만큼
+        for(let i=0; i<subNum; i++) {
+            subName[i] = prompt('과목을 입력하세요 >>');
+        }
+        //(3) 각 과목 점수 입력
+        for(let i=0; i<subNum; i++) {
+            subScore[i] = Number(prompt('해당과목 점수을 입력하세요 >>'));
+        }
+        //(4) 총점, 평균 도출
+        for(let i=0;i<subNum;i++){
+            ttlScore += subScore[i];
+        }
+        avgScore = parseInt(ttlScore / subNum);
+        
+        //(5) 결과 출력(콘솔 확인 후 HTML 문서 내)
+        document.write("<table><thead><tr>");
+            for(let i =0; i<subNum; i++){
+                document.write(`<th>${subName[i]}</th>`);
+            }
+        document.write("<th>총점</th><th>평균</th></tr></thead>");
+         
+        document.write("<tbody><tr>");
+            for(let i =0; i<subNum; i++){
+                document.write(`<td>${subScore[i]}</td>`);
+            } 
+        document.write(`<td>${ttlScore}</td><td>${avgScore}</td>`);
+        document.write("</tr></tbody></table>");
+
+    </script>
+</body>
+</html>

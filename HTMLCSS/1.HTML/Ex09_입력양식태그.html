@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex09_입력양식태그</title>
+</head>
+<body>
+    <h2>입력 양식 태그 form태그</h2>
+    <P>form태그 : 사용자로부터 데이터를 입력받아서 server에 전송할 때 사용하는 태그</P>
+    <hr>
+    <form action=""> <!-- action 속성 : 데이터를 보낼 위치 -->
+        <!-- type="text" 짧은 글을 입력
+            name 속성 : 해당 데이터를 구분하기 위한 이름(필수)
+            value 속성 : 기본값 -->
+        ID : <input type="text" name="id" value="아이디"> <br>
+        name : <input type="text" name="name" placeholder="이름을 입력하세요"><br>
+        PW: <input type="password" name="pw">
+        <hr>
+        통신사선택
+        <!-- 데이터가 넘어가는 형식
+                Phone이름으로 SKT 값이 전송 
+                Phone이름으로 케이티 값이 전송
+                Phone이름으로 엘지유플러스 값이 전송 -->
+        <select name="Phone">
+            <option>SKT</option>
+            <option value="케이티">KT</option>
+            <option value="엘지유플러스">LGU+</option>
+        </select>
+        <hr>
+        좋아하는 음식 고르기(체크박스)<br>
+        <!-- name을 food로 통일하는 이유!
+                name 속성은 데이터를 구분하기 위한 속성으로
+                치킨/피자/햄버거를 가지고 올 때 좋아하는 음식이라는 카테고리로
+                데이터를 한번에 가지고 와야 함!
+            value를 지정하는 이유
+                어떤 것을 선택했는지 구분하기 위해서 
+                value 값을 지정 -->
+        <input type="checkbox" name="food" value="치킨"> 치킨 <br>
+        <input type="checkbox" name="food" value="피자"> 피자 <br>
+        <input type="checkbox" name="food" value="햄버거"> 햄버거 <br>
+    <hr>
+    성별 선택하기(라디오) <br>
+    <input type="radio" name="gender" value="male"> 남자
+    <input type="radio" name="gender" value="female"> 여자
+    <input type="radio" name="gender" value="none"> 없음
+    <hr>
+    파일 선택 <input type="file" name="img">
+    <hr>
+    색깔 선택 <input type="color" name="color">
+    <hr>
+    날짜 선택 <input type="date" name="birthday">
+    <hr>
+    날짜+시간 선택 <input type="datetime-local" name="meeting">
+    <hr>
+    게시글 작성
+    <!-- cols 가로, rows 세로 -->
+    <textarea name="board" id="" cols="30" rows="10"></textarea>
+    <hr>
+    submit버튼 : input 요소의 모든 값을 전송할 때 사용 <br>
+    <input type="submit" value="회원가입"> <br>
+    reset버튼 : input 요소의 모든 값을 초기화 <br>
+    <input type="reset" value="전부 삭제"><br>
+
+    </form>
+
+
+
+</body>
+</html>

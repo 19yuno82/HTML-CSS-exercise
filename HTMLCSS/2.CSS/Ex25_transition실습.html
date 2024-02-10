@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition실습</title>
+    <style>
+        /* (1) 버튼 틀 만들기
+               너비 300px, 높이 100px
+               테두리 두께 3px */
+               .outer{
+                width: 300px;
+                height: 100px;
+                border: 3px solid black;
+               }
+               .inner{
+                width: 0%;
+                height: 100%;
+                background-color: red;
+                border: 2px solid blue;
+
+                transition-duration: 1s;
+               }
+               
+
+        /* (2) 버튼 안에서 배경 차오르는 부분 만들기
+               높이 100%
+               너비 0% => 마우스 올릴 시 100% */
+               .outer:hover .inner{
+                    width: 100%;
+               }
+               .outer:hover span{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    transition-delay: 10s;
+               }
+
+        /* (3) 버튼 위에 글씨 얹기 */
+        span{
+            
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <span>button</span>
+        </div>
+    </div>
+</body>
+</html>

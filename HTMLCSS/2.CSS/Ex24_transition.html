@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            
+            /*transition-duration : 몇초 동안 재생할지*/
+            transition-duration: 0.1s;
+            /*transition-delay : 몇초 후에 재생할지*/
+            /*요소에 직접 적용 : 마우스 올릴 때, 내일 때 모두 적용*/
+            transition-delay: 1s;
+            /*transition-property : 어떤속성을 변형할지*/
+            transition-property: width;
+
+        }
+        .b1:hover{
+            background-color: goldenrod;
+            width: 130px;
+            transition-delay: 1s;
+            /*이벤트에 적용 : 마우스를 내릴 때는 적용 X*/
+        }
+        .b2:hover{
+            background-color: gold;
+            width: 140px;
+        }
+        .b3:hover{
+            background-color: bisque;
+            width: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box b1"></div>
+    <div class="box b2"></div>
+    <div class="box b3"></div>
+    
+</body>
+</html>

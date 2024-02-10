@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button onclick="getData()">Get Data(*￣3￣)╭</button>
+
+    <script>
+        let movieUrl = 'http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f541ce00742d5eda9a03ef9c76506d20&targetDt=20231001';
+        
+        //jQuery를 통한 비동기 통신
+
+        //영화진흥위원회 API를 가져와서
+        //일일 박스오피스 영화 TOP10의
+        //순위,영화이름,개봉일 출력
+        //rank,movieNm,openDt
+        const getData = () =>{
+            $.ajax({
+                //어떤 방식으로 통신할건지
+                type : 'get',
+                //어디랑 통신할건지
+                url : movieUrl,
+                //통신에 성공 시 실행할 로직
+                success : (response)=>{
+                    // response => 응답데이터
+                    let movieList = response.boxOfficeResult.dailyBoxOfficeList;
+                    // for(let i=0;i<10;i++)
+                    // console.log(movieList[i].rank,movieList[i].movieNm,movieList[i].openDt);
+                    // for( i of movieList)
+                    // console.log(i.rank,i.movieNm,i.openDt);
+                    movieList.forEach(element => {
+                        console.log(element.rank,element.movieNm,element.openDt);
+                    });
+                },
+                //통신에 실패 시 실행할 로직
+                error : ()=>{}
+            })
+        }
+    </script>
+</body>
+</html>

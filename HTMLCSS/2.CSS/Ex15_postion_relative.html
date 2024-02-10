@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex15</title>
+    <style>
+        div{
+            width: 200px; height: 200px;
+            position: relative;
+            /*relative: 요소의 원래 위치를 기준으로 해서 상대적인 위치 선정*/
+        }
+        #orange{
+            background-color: orange;
+            top: 100px;
+            left: 100px;
+            z-index: 3;
+            /*z-index: 화면에 요소가 쌓이는 순서
+                     : 숫자가 클수록 앞쪽으로 요소가 나옴*/
+        }
+        #tomato{
+            background-color: tomato;
+            z-index: 2;
+        }
+        #green{
+            background-color: green;
+            bottom: 100px;
+            right: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="orange"></div>
+    <div id="tomato"></div>
+    <div id="green"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Collection</title>
+</head>
+<body>
+    <h3>점심 메뉴</h3>
+    <ul>
+        <li>쇼유라멘</li>
+        <li>수육</li>
+        <li>함박까스</li>
+        <li>파튀김떡볶이</li>
+    </ul>
+
+    <script>
+        //getElementsByTagName 메소드 활용 li태그 요소들 가져오기
+
+        let liList = document.getElementsByTagName('li');
+        console.log(liList);
+        //첫번째 글자 가져오기
+        console.log(liList[0].innerText);
+
+        //가지고 올 요소가 1개여도 HTML Collection으로 넘어온다
+        //=> index로 접근이 필요하다
+
+        let h3Element = document.getElementsByTagName('h3');
+        console.log(h3Element[0].innerText);
+
+        //배열의 형태, 인덱스 및 배열 길이 활용 가능
+        //반복문 활용 가능, 배열 관련 함수 사용 X
+        for(let i=0;i<liList.length;i++) {
+            console.log(liList[i].innerText);
+        }
+
+    </script>
+</body>
+</html>

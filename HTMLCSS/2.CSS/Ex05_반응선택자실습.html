@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        반응선택자를 쓸 때는 순서를 반드시 지켜야 합니다.
+        hover 먼저 쓰고 active 나중에 쓰자
+        */
+        p:hover{
+            color: green;
+            font-size: 10px;
+        }
+        p:active{
+            color: violet;
+            font-size: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!--
+        1.마우스로 클릭했을 때 색상을 보라색으로 변경, 폰트 크기는 50px로 키우기
+        2.마우스를 올렸을 때 색상을 초록색으로 변경, 폰트 크기는 10px로 줄여주기
+    -->
+    <p>박수현</p>
+</body>
+</html>

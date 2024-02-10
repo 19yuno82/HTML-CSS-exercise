@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <!--h1#h1Tag-->
+    <h1 id="h1Tag">DOM</h1>
+    <h2 class="h2Tag">practice</h2>
+    <script>
+        /*
+        javascript로 HTML 문서 내 h1 요소 가져오기
+
+        문서에 -> document
+        접근해서 -> .
+        가져올거야 -> get
+        요소를 -> Element
+        아이디로 -> ById
+        아이디는? (h1Tag)
+        */
+       let h1Element = document.getElementById('h1Tag');
+       console.log(h1Element);
+       //h2 요소 가져와서 콘솔 창으로 출력하기
+       let h2Element = document.getElementsByClassName('h2Tag');
+       console.log(h2Element);
+    </script>
+</body>
+</html>

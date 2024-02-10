@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation실습</title>
+    <style>
+        .img{
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeJryKvqUfplG0vXpz-QXgFwB1XvDdrtspxQzG-wnQ8zY6kBRfePqywSOUON2PHcjX-Nw&usqp=CAU);
+            width: 300px;
+            height: 400px;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            animation-name: imgAni;
+            animation-duration: 2s;
+            animation-iteration-count: 3;
+
+        }
+        @keyframes imgAni {
+            from{
+                /*첫번째 이미지 경로로 지정*/
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeJryKvqUfplG0vXpz-QXgFwB1XvDdrtspxQzG-wnQ8zY6kBRfePqywSOUON2PHcjX-Nw&usqp=CAU);
+            }
+            to{
+                /*두번째 이미지 경로로 지정*/
+                background-image: url(https://image.ytn.co.kr/general/jpg/2019/1114/201911141414178051_t.jpg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="img"></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        #red{
+            background-color: rgb(207, 81, 30);
+            border: 10px double white;
+            box-sizing: border-box;
+        }
+        #blue{
+            background-color: rgb(41, 111, 192);
+            border-radius: 50px;
+        }
+        #yellow{
+            background-color: rgb(184, 135, 30);
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            /* 
+            %를 사용하면 너비와 높이의 상대적인 크기이기 때문에
+            직사각형에 사용할 때는 모양이 무너질 수 있다            
+            */
+        }
+    </style>
+</head>
+<body>
+    <div id="red"></div>
+    <div id="blue"></div>
+    <div id="yellow"></div>
+</body>
+</html>

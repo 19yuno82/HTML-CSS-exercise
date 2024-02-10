@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        /*
+        flex: 아이템 간의 공간 배분 및 정렬
+                container + item
+        ▷ container : flex 영향을 받는 전체 공간
+        ▷ item : 설정된 속성에 따라 배치되는 것
+
+        메인축(main-aixs) : 아이템이 배치되는 축의 방향
+        교차축(cross-aixs) : 메인축과 수직이 되는 방향
+        */
+        .container{
+            background-color: beige;
+            display: flex;
+            flex-direction: row;
+            /*
+            flex-direction : 아이템들이 배치되는 
+                             축의 방향을 결정하는 속성
+            => row : 가로 배치, 기본값
+            => row-reverse : 가로 역순 배치
+            => column : 세로 배치
+            => column-reverse : 세로 역순 배치
+            */
+            flex-wrap: wrap;
+            /*
+            flex-wrap : 아이템들의 줄바꿈을 결정하는 속성
+            => nowrap : 줄바꿈X, 기본값
+            => wrap : 줄바꿈O
+            => wrap-reverse : 줄바꿈 역순 배치
+            */
+
+            justify-content: space-around;
+            /*
+            justify-content : 메인축 방향 정렬을 결정하는 속성
+            => flex-start : 시작점 정렬, 기본값
+            => flex-end : 끝점 정렬
+            => center : 가운데 정렬
+            => space-between : 아이템 사이 균일한 여백
+            => space-evenly : 아이템 사이와 양 끝 균일한 여백
+            => space-around : 아이템 둘레 균일한 여백
+            */
+        }
+        .item{
+            background-color: lightgray;
+            width: 200px;
+            height: 200px;
+            font-weight: bold;
+            font-size: 3rem;
+            border: 1px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*align-items : 교차축 방향 정렬을 결정하는 속성*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">box1</div>
+        <div class="item">box2</div>
+        <div class="item">box3</div>
+        <div class="item">box4</div>
+        <div class="item">box5</div>
+        <div class="item">box6</div>
+    </div>
+</body>
+</html>

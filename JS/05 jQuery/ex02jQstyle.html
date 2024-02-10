@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery style</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>jQuery style</h1>
+    <button>change❓</button>
+
+    <script>
+        $('button').click(()=>{
+            console.log('click');
+            //스타일 제어
+            //vanilaJS => .style.속성 = 값
+            //jQuery => .css(속성,값)
+
+            //(1) 한줄씩 입력
+            // $('h1').css('color','tomato');
+            // $('h1').css('background-color','lightpink');
+            // $('h1').css('font-style','italic');
+
+            //(2) chain 방식 입력
+            //jQuery 메소드는 메소드가 제어하는 대상을 리턴
+            //=> 메소드를 계속해서 붙여넣는 방식 사용 가능
+            // $('h1').css('color','red')
+            // .css('background-color','lightpink')
+            // .css('font-style','italic');
+
+            //(3) 객체로 입력
+            $('h1').css({
+                'color':'red',
+                'background-color':'lightpink',
+                'font-style':'italic'
+            });
+
+        })
+    </script>
+</body>
+</html>

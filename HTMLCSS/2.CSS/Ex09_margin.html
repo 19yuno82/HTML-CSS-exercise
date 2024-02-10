@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        #red{
+            background-color: red;
+            margin: 50px;
+            /* 모든 방향에 바깥여백을 부여*/
+        }
+        #yellow{
+            background-color: yellow;
+            margin-left: 10px;
+            margin-bottom: 30px;
+        }
+        #blue{
+            /*
+            마진 상쇄 현상 
+            두 개의 블럭 요소의 상하 마진이 겹칠 경우
+            가장 큰 마진으로 결합되는 현상
+            */
+            background-color: blue;
+            margin-top: 10px;
+        }
+        #green{
+            background-color: green;
+            margin: auto;
+            /*웹페이지 정가운데로 위치하도록 여백 부여*/
+        }
+    </style>
+</head>
+<body>
+    <div id="red"></div>
+    <div id="yellow"></div>
+    <div id="blue"></div>
+    <div id="green"></div>
+</body>
+</html>

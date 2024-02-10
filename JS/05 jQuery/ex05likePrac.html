@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>like practice</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button class="likebtn">좋아요 (❁´◡`❁)</button>
+    <span>0</span>
+    <br><br>
+    <input type="text">
+    <button class="textbtn">댓글</button>
+    <br>
+    <div class="container">
+        <p>
+            첫 댓글
+            <button class="removebtn">삭제</button>
+        </p>
+    </div>
+
+    <script>
+        /*
+        속성 추가, 제거 관련
+        attr(추가할 속성, 속성의값) : 속성 추가 메소드
+        removeAttr(제거할 속성) : 속성 제거 메소드
+        removeClass(속성의 값) : class 속성의 값만 제거
+        */
+        //(1) 좋아요 버튼 클릭 시
+        //    좋아요 -> 좋아요 취소
+        //    0->1
+        //    class='likebtn' -> 'dislikebtn'
+        $(document).on('click','.likebtn',(e)=>{
+            console.log(e);
+            $(e.target).text('좋아요 취소');
+            $('.likebtn+span').text('1');
+            $(e.target).removeAttr('class');
+            $(e.target).attr('class','dislikebtn');
+
+        })
+        //(2) 좋아요 취소 버튼 클릭 시
+        //    좋아요 취소 -> 좋아요
+        //    1->0
+        $(document).on('click','.dislikebtn',(e)=>{
+            $(e.target).text('좋아요');
+            $('.dislikebtn+span').text('0');
+            $(e.target).removeClass('disliketbn');
+            $(e.target).attr('class','likebtn');
+        })
+        let i = 0;
+        $(document).on('click','.textbtn',()=>{
+            //(3-1)input 입력 값 가져오기
+            //vanilaJS ->value / jQuery->val()
+            let inputValue = $('input').val();
+            console.log(inputValue);
+
+            //(3-2) 댓글 공간에 <p>입력값 + 삭제버튼</p> 생성
+            //$(A).append(B) : B를 A의 마지막 위치에 추가
+            $('.container').append(`<p>
+                ${inputValue}
+                <button class="removebtn">삭제</button>
+                </p>`);
+            //(3-3) 입력값 공백 처리
+            $('input').val('');
+        })
+
+        //삭제
+        $(document).on('click','.removebtn',(e)=>{
+            //삭제 버튼만 삭제
+            // $(e.target).remove();
+
+            //삭제버튼 부모 요소 삭제
+            //parents() : 부모 요소 전체 선택
+            // $(e.target).parent().remove();
+            
+            //해당 요소를 찾아 삭제
+            $(e.target).closest('p').remove();
+        })
+
+    </script>
+</body>
+</html>

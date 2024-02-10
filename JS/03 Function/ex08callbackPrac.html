@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex08callback</title>
+</head>
+<body>
+    <button>click</button>
+    <br>
+    <!--글자들이 쌓일 공간-->
+    <div id="container"></div>
+
+    <script>
+        //(1)글자들이 쌓일 공간 가져오기
+        let container = document.getElementById('container')
+        console.log(container);
+        //(2)타이머만들기(1초~10초)
+        for(let i=1;i<11;i++){
+            setTimeout(()=>{
+            container.innerHTML += `${i}초<br>`
+        },1000*i)
+    }
+        //(3)버튼 클릭 시, 클릭 문구 띄워주기
+        document.querySelector('button').addEventListener('click',()=>{
+            container.innerHTML += '(☞ﾟヮﾟ)☞ <br>☜(ﾟヮﾟ☜)<br>'
+        })
+    </script>
+</body>
+</html>

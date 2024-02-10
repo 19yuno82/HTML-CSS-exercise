@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex실습</title>
+    <style>
+        .container{
+            background-color: lightcyan;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .cardwrap{
+            background-color: lightcoral;
+            /*이미지영역과 텍스트를 아이템으로 배치*/
+            display: flex;
+            /*이미지와 텍스트를 세로로 배치*/
+            flex-direction: column;
+            /*텍스트 가운데 정렬(교차축 방향)*/
+            align-items: center;
+            margin-top: 10px;
+        }
+        .imgsec{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            background-color: lavender;
+            width: 400px;
+            height: 400px;
+        }
+        .textsec{
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .img1{
+            background-image: url(https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000101.png);
+        }
+        .img2{
+            background-image: url(https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000401.png);
+        }
+        .img3{
+            background-image: url(https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000701.png);
+        }
+        .img4{  
+            background-image: url(https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/005002.png);
+        }
+        .img5{
+            background-image: url(https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/005801.png);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cardwrap">
+            <div class="imgsec img1"></div>
+            <div class="textsec">
+                <p>이상해씨</p>
+                </div>
+        </div>
+        <div class="cardwrap">
+            <div class="imgsec img2"></div>
+            <div class="textsec">
+                <p>파이리</p>
+            </div>
+        </div>
+        <div class="cardwrap">
+            <div class="imgsec img3"></div>
+            <div class="textsec">
+                <p>꼬부기</p>
+            </div>
+        </div>
+        <div class="cardwrap">
+            <div class="imgsec img4"></div>
+            <div class="textsec">
+                <p>디그다</p>
+            </div>
+        </div>
+        <div class="cardwrap">
+            <div class="imgsec img5"></div>
+            <div class="textsec">
+                <p>가디</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex06_테이블태그</title>
+</head>
+<body>
+    <h2> 메뉴판 만들기 </h2>
+    <table border="1">
+        <!-- caption : 표의 제목 -->
+        <caption> 동명동 정희 </caption>
+        <!-- thead : header에 들어갈 content를 모아놓은 태그 -->
+        <thead>
+            <!-- tr : table row 행을 의미하는 태그 -->
+            <tr>
+                <!-- th: table header 행의 제목을 의미하는 태그 -->
+                <th>메뉴</th>
+                <th>가격</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+        <!-- tbody : body에 들어갈 content를 모아놓은 태그 , 주로 내용을 담아놓음 -->
+        <tbody>
+            <tr>
+                <td>고사리크림수제비</td>
+                <td>12,900원</td>
+                <td rowspan="3">식사</td>
+            </tr>
+            <tr>
+                <td>감태타르타르</td>
+                <td>11,900원</td>
+                
+            </tr>
+            <tr>
+                <td>새우감자전</td>
+                <td>14,900원</td>
+                
+            </tr>
+            <tr>
+                <td>콜라</td>
+                <td>2,000원</td>
+                <td rowspan="2">음료</td>
+            </tr>
+            <tr>
+                <td>사이다</td>
+                <td>2,000원</td>
+                
+            </tr>   
+            <tr>
+                <td>환타</td>
+                <td colspan="2">판매중지</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+</html>

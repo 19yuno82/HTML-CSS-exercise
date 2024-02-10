@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex19_스타일선언방식</title>
+</head>
+<style>
+    #no2{
+        color: blue;
+        background-color: yellowgreen;
+    }
+</style>
+<!--3.외부스타일 방식: link태그를 사용해서 외부css 적용
+                    : 특징1. 보안유지를 위해 외부css 적용
+                    : 특징2. link태그가 쓰인 순서대로 css를 적용
+                    : 특징3. 병렬 다운로드를 지원 O -->
+<link rel="stylesheet" href="/2.CSS/Ex19_외부스타일.css">
+<!--4.import 방식: style태그 내에 @import 사용해서 외부css 적용
+                    : 특징1. 보안유지를 위해 외부css 적용
+                    : 특징2. css 적용 순서가 예측 불가능
+                    : 특징3. 병렬 다운로드를 지원 X -->
+<style>
+    @import url("./Ex19_임폴트방식.css");
+</style>
+<body>
+    <!--1.인라인 방식: html태그 내에 style 속성을 지정-->
+    <h1 style="color: red; background-color: black;">1.인라인 방식</h1>
+    <h1 id="no2">2.내부스타일 방식</h1>
+    <h1 id="no3">3.외부스타일 방식</h1>
+    <h1 id="no4">4.import 방식</h1>
+</body>
+</html>

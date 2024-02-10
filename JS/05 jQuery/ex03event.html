@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>jQuery event</h1>
+    <h1>jQuery event</h1>
+    <h1>jQuery event</h1>
+    <button>change💛</button>
+
+    <script>
+        //$(요소).on(이벤트타입, 이벤트핸들러);
+        //this : 호출된 HTML 객체를 저장
+        //화살표 함수에서는 e.target으로 사용 (매개변수 e)
+
+        //(1) 버튼을 클릭했을 때, h1 글자색을 파란색으로 변경
+        $('button').on('click',()=>{
+            $('h1').css('color','blue');
+        })
+        //(2) h1 마우스를 올렸을 때, 글자색을 빨간색으로 변경 => mouseover
+        $('h1').on('mouseover',function() {
+            $(this).css('color','red');
+        })
+        //(3) h1 마우스를 내렸을 때, 글자색을 검은색으로 변경 => mouseout
+        $('h1').on('mouseout',(e)=>{
+            console.log((e.target));
+            $(e.target).css('color','black');
+        })
+    </script>
+</body>
+</html>
